@@ -1,0 +1,46 @@
+<div class="container mt-3">
+    <h4>DataTable Example</h4>
+  
+    <!-- Search Box (Optional) -->
+    <input type="text" class="form-control mb-3" placeholder="Full text search...">
+  
+    <!-- Table -->
+    <table class="table table-bordered">
+      <thead class="table-light">
+        <tr>
+          <th>#</th>
+          <th>Country</th>
+          <th>Area</th>
+          <th>Population</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let country of paginatedCountries">
+          <td>{{ country.id }}</td>
+          <td>
+            <span>{{ country.flag }}</span> {{ country.name }}
+          </td>
+          <td>{{ country.area }}</td>
+          <td>{{ country.population }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Pagination -->
+    <div class="d-flex justify-content-between align-items-center">
+      <ngb-pagination
+        [(page)]="currentPage"
+        [pageSize]="itemsPerPage"
+        [collectionSize]="countries.length"
+        [boundaryLinks]="true">
+      </ngb-pagination>
+  
+      <!-- Dropdown for Items Per Page -->
+      <select class="form-select w-auto" [(ngModel)]="itemsPerPage">
+        <option *ngFor="let option of itemsPerPageOptions" [value]="option">
+          {{ option }} items per page
+        </option>
+      </select>
+    </div>
+  </div>
+  

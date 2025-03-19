@@ -21,7 +21,8 @@
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -41,7 +42,8 @@
               "src/assets/js/toasts.js",
               "src/assets/js/markdown.js",
               "src/assets/js/litepicker.js",
-              "src/assets/js/datatables/datatables-simple-demo.js"
+              "src/assets/js/sb-customizer.js",
+              "src/assets/js/beacon.min.js"
             ]
           },
           "configurations": {
@@ -88,7 +90,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",

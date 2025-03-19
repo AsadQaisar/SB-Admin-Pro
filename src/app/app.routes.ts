@@ -4,6 +4,8 @@ import { SignupComponent } from './pages/auth/signup/signup.component';
 import { ForgotPasswordComponent } from './pages/auth/forgot-password/forgot-password.component'; 
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
 import { DefaultComponent } from './pages/dashboards/default/default.component';
+import { MultipurposeComponent } from './pages/dashboards/multipurpose/multipurpose.component';
+import { AffiliateComponent } from './pages/dashboards/affiliate/affiliate.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'auth/login', pathMatch: 'full' }, // Redirect to login by default
@@ -14,7 +16,9 @@ export const routes: Routes = [
         path: '',
         component: DashboardLayoutComponent, // Wraps pages with sidebar, header, footer
         children: [
-          { path: 'dashboard', component: DefaultComponent }
+          { path: 'dashboard/default', component: DefaultComponent },
+          { path: 'dashboard/multipurpose', component: MultipurposeComponent },
+          { path: 'dashboard/affiliate', component: AffiliateComponent }
         ]
       },
       { path: '**', redirectTo: 'dashboard' } // Default route

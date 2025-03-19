@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
     const datatablesSimple = document.getElementById('datatablesSimple');
     if (datatablesSimple) {
+        console.log(datatablesSimple);
         new simpleDatatables.DataTable(datatablesSimple);
     }
 });

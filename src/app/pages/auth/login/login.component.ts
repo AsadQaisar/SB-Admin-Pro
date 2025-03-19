@@ -14,6 +14,6 @@ export class LoginComponent {
 
   onLogin() {
     // Perform authentication logic here
-    this.router.navigate(['/dashboard']); // Redirect after login
+    this.router.navigate(['/dashboard/default']); // Redirect after login
   }
 }
